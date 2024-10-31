@@ -8,12 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="added core project and reference to api project">
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="common, directory, user and friend domain">
       <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Common/BaseEntity.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/Address.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/Country.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/StateProvince.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Users/Friendship.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/FriendManagement/FriendRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/FriendManagement/FriendRequestStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/FriendManagement/Friendship.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Users/Password.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Users/Profile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
@@ -103,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730393871568</updated>
-      <workItem from="1730393876341" duration="1862000" />
+      <workItem from="1730393876341" duration="2187000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -121,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730394156510</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="common, directory, user and friend domain">
+      <option name="closed" value="true" />
+      <created>1730396064890</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730396064890</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +143,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="added core project and reference to api project" />
-    <option name="LAST_COMMIT_MESSAGE" value="added core project and reference to api project" />
+    <MESSAGE value="common, directory, user and friend domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="common, directory, user and friend domain" />
   </component>
 </project>
