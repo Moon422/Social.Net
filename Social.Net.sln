@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Net.Api", "Social.Net.Api\Social.Net.Api.csproj", "{A4FB711A-9DE2-408A-BE3B-DB9E9805A448}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Net.Core", "Social.Net.Core\Social.Net.Core.csproj", "{9A9AF3F2-D8AA-46A8-820B-09768DBE764D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{A4FB711A-9DE2-408A-BE3B-DB9E9805A448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4FB711A-9DE2-408A-BE3B-DB9E9805A448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4FB711A-9DE2-408A-BE3B-DB9E9805A448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9AF3F2-D8AA-46A8-820B-09768DBE764D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9AF3F2-D8AA-46A8-820B-09768DBE764D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9AF3F2-D8AA-46A8-820B-09768DBE764D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9AF3F2-D8AA-46A8-820B-09768DBE764D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
