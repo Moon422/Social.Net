@@ -8,18 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="common, directory, user and friend domain">
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Common/BaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/Address.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/Country.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/StateProvince.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/FriendManagement/FriendRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/FriendManagement/FriendRequestStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/FriendManagement/Friendship.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Users/Password.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Users/Profile.cs" afterDir="false" />
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="added pomelo to data project">
+      <change afterPath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Core/Social.Net.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Core/Social.Net.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Data/Social.Net.Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/Social.Net.Data.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +123,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730396064890</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pomelo added to data project">
+      <option name="closed" value="true" />
+      <created>1730396605678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730396605678</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added pomelo to data project">
+      <option name="closed" value="true" />
+      <created>1730396710500</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730396710500</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,10 +148,13 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="added core project and reference to api project" />
     <MESSAGE value="common, directory, user and friend domain" />
-    <option name="LAST_COMMIT_MESSAGE" value="common, directory, user and friend domain" />
+    <MESSAGE value="pomelo added to data project" />
+    <MESSAGE value="added pomelo to data project" />
+    <option name="LAST_COMMIT_MESSAGE" value="added pomelo to data project" />
   </component>
 </project>
