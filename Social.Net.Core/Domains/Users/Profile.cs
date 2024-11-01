@@ -37,5 +37,7 @@ public class Profile : BaseEntity, ICreationAuditable, IModificationAuditable, I
     public DateTime? ModifiedOn { get; set; }
     public bool IsDeleted { get; set; }
     public DateTime DeletedOn { get; set; }
+
+    public Password Password { get; set; }
 }
 

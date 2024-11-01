@@ -15,4 +15,6 @@ public class Country : BaseEntity
     public bool Published { get; set; }
     
     public int DisplayOrder { get; set; }
+    
+    public IList<StateProvince> StateProvinces { get; set; }
 }

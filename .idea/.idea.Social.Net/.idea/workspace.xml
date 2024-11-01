@@ -8,10 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="added pomelo to data project">
-      <change afterPath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" afterDir="false" />
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Data/Social.Net.Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/Social.Net.Data.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730393871568</updated>
       <workItem from="1730393876341" duration="2187000" />
+      <workItem from="1730427401687" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -139,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730396710500</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="createing dbcontext">
+      <option name="closed" value="true" />
+      <created>1730397178246</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730397178246</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +163,7 @@
     <MESSAGE value="common, directory, user and friend domain" />
     <MESSAGE value="pomelo added to data project" />
     <MESSAGE value="added pomelo to data project" />
-    <option name="LAST_COMMIT_MESSAGE" value="added pomelo to data project" />
+    <MESSAGE value="createing dbcontext" />
+    <option name="LAST_COMMIT_MESSAGE" value="createing dbcontext" />
   </component>
 </project>
