@@ -9,8 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Social.Net.Data/IRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Data/ITransactionManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Data/Repository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Data/TransactionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/dataSources/dd807c65-f324-4327-a649-dc0496d6fe9d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/dataSources/dd807c65-f324-4327-a649-dc0496d6fe9d/storage_v2/_src_/schema/social_db.kIYf0w.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +34,13 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Moon422/Social.Net.git&quot;,
-    &quot;accountId&quot;: &quot;c491e823-4195-4253-b447-e229d2bbba8a&quot;
+    &quot;accountId&quot;: &quot;2d4c4390-6b65-47ed-b271-f70df78a9e21&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/moon/Projects/CSharp/Social.Net/Social.Net.Data/DesignTimeDbContextFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/moon/Projects/CSharp/Social.Net/Social.Net.Data/DesignTimeDbContextFactory.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -53,7 +62,13 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Social.Net.Api: http">
@@ -98,6 +113,8 @@
       <updated>1730393871568</updated>
       <workItem from="1730393876341" duration="2187000" />
       <workItem from="1730427401687" duration="660000" />
+      <workItem from="1730428709871" duration="4416000" />
+      <workItem from="1730482230169" duration="2374000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -147,7 +164,39 @@
       <option name="project" value="LOCAL" />
       <updated>1730397178246</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="entity builder">
+      <option name="closed" value="true" />
+      <created>1730431335614</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730431335614</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Microsoft.EntityFrameworkCore.Design">
+      <option name="closed" value="true" />
+      <created>1730431654933</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730431654933</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ef design">
+      <option name="closed" value="true" />
+      <created>1730431766317</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730431766317</updated>
+    </task>
+    <task id="LOCAL-00010" summary="initial migrations">
+      <option name="closed" value="true" />
+      <created>1730432626677</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730432626677</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +213,10 @@
     <MESSAGE value="pomelo added to data project" />
     <MESSAGE value="added pomelo to data project" />
     <MESSAGE value="createing dbcontext" />
-    <option name="LAST_COMMIT_MESSAGE" value="createing dbcontext" />
+    <MESSAGE value="entity builder" />
+    <MESSAGE value="Microsoft.EntityFrameworkCore.Design" />
+    <MESSAGE value="ef design" />
+    <MESSAGE value="initial migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial migrations" />
   </component>
 </project>

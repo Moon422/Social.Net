@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Social.Net.Data;
 
@@ -11,9 +12,11 @@ using Social.Net.Data;
 namespace Social.Net.Data.Migrations
 {
     [DbContext(typeof(SocialDbContext))]
-    partial class SocialDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241102135332_RemovedNavigationalProperties")]
+    partial class RemovedNavigationalProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,8 +70,7 @@ namespace Social.Net.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("NumericIsoCode")
                         .HasColumnType("int");
@@ -78,15 +80,11 @@ namespace Social.Net.Data.Migrations
 
                     b.Property<string>("ThreeLetterIsoCode")
                         .IsRequired()
-                        .HasMaxLength(3)
-                        .HasColumnType("char(3)")
-                        .IsFixedLength();
+                        .HasColumnType("longtext");
 
                     b.Property<string>("TwoLetterIsoCode")
                         .IsRequired()
-                        .HasMaxLength(2)
-                        .HasColumnType("char(2)")
-                        .IsFixedLength();
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 

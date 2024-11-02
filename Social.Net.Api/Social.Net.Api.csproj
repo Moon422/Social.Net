@@ -13,6 +13,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Social.Net.Core\Social.Net.Core.csproj" />
+      <ProjectReference Include="..\Social.Net.Data\Social.Net.Data.csproj" />
+      <ProjectReference Include="..\Social.Net.Services\Social.Net.Services.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="Program.cs" />
     </ItemGroup>
 
 </Project>

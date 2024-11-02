@@ -22,12 +22,10 @@ public class Profile : BaseEntity, ICreationAuditable, IModificationAuditable, I
     public string Email { get; set; }
     
     public int PresentAddressId { get; set; }
-    public Address PresentAddress { get; set; }
     
     public int? PermanentAddressId { get; set; }
-    public Address? PermanentAddress { get; set; }
-    
-    public bool IsActive { get; set; }
+
+    public bool IsActive { get; set; } = true;
     
     public bool RequireAuthentication { get; set; }
     
@@ -37,7 +35,5 @@ public class Profile : BaseEntity, ICreationAuditable, IModificationAuditable, I
     public DateTime? ModifiedOn { get; set; }
     public bool IsDeleted { get; set; }
     public DateTime DeletedOn { get; set; }
-
-    public Password Password { get; set; }
 }
 

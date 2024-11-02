@@ -19,12 +19,12 @@ public class SocialDbContext(DbContextOptions options) : DbContext(options)
     {
         modelBuilder.Entity<Profile>(entity =>
         {
-            entity.HasOne(p => p.PresentAddress)
+            entity.HasOne<Address>()
                 .WithMany()
                 .HasForeignKey(p => p.PresentAddressId)
                 .IsRequired();
 
-            entity.HasOne(p => p.PermanentAddress)
+            entity.HasOne<Address>()
                 .WithMany()
                 .HasForeignKey(p => p.PermanentAddressId);
         });
@@ -36,15 +36,15 @@ public class SocialDbContext(DbContextOptions options) : DbContext(options)
                 .IsFixedLength()
                 .IsRequired();
 
-            entity.HasOne(p => p.Profile)
-                .WithOne(p => p.Password)
+            entity.HasOne<Profile>()
+                .WithOne()
                 .HasForeignKey<Password>(p => p.ProfileId)
                 .IsRequired();
         });
 
         modelBuilder.Entity<Address>(entity =>
         {
-            entity.HasOne(a => a.StateProvince)
+            entity.HasOne<StateProvince>()
                 .WithMany()
                 .HasForeignKey(a => a.StateProvinceId)
                 .IsRequired();
@@ -52,20 +52,31 @@ public class SocialDbContext(DbContextOptions options) : DbContext(options)
 
         modelBuilder.Entity<StateProvince>(entity =>
         {
-            entity.HasOne(sp => sp.Country)
-                .WithMany(c => c.StateProvinces)
+            entity.HasOne<Country>()
+                .WithMany()
                 .HasForeignKey(sp => sp.CountryId)
+                .IsRequired();
+        });
+
+        modelBuilder.Entity<Country>(entity =>
+        {
+            entity.Property(e => e.TwoLetterIsoCode)
+                .IsFixedLength()
+                .IsRequired();
+
+            entity.Property(e => e.ThreeLetterIsoCode)
+                .IsFixedLength()
                 .IsRequired();
         });
 
         modelBuilder.Entity<FriendRequest>(entity =>
         {
-            entity.HasOne<Profile>(fr => fr.SenderProfile)
+            entity.HasOne<Profile>()
                 .WithMany()
                 .HasForeignKey(fr => fr.SenderProfileId)
                 .IsRequired();
 
-            entity.HasOne<Profile>(fr => fr.ReceiverProfile)
+            entity.HasOne<Profile>()
                 .WithMany()
                 .HasForeignKey(fr => fr.ReceiverProfileId)
                 .IsRequired();
@@ -73,12 +84,12 @@ public class SocialDbContext(DbContextOptions options) : DbContext(options)
 
         modelBuilder.Entity<Friendship>(entity =>
         {
-            entity.HasOne<Profile>(f => f.Profile1)
+            entity.HasOne<Profile>()
                 .WithMany()
                 .HasForeignKey(f => f.ProfileId1)
                 .IsRequired();
             
-            entity.HasOne<Profile>(f => f.Profile2)
+            entity.HasOne<Profile>()
                 .WithMany()
                 .HasForeignKey(f => f.ProfileId2)
                 .IsRequired();

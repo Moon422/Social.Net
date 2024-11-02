@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Net.Core", "Social.N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Net.Data", "Social.Net.Data\Social.Net.Data.csproj", "{3EB38522-BA17-42FD-A86D-0C72F9421284}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Net.Services", "Social.Net.Services\Social.Net.Services.csproj", "{A39A9D3F-9232-4565-BBD6-94372D6B03EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{3EB38522-BA17-42FD-A86D-0C72F9421284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EB38522-BA17-42FD-A86D-0C72F9421284}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EB38522-BA17-42FD-A86D-0C72F9421284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39A9D3F-9232-4565-BBD6-94372D6B03EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39A9D3F-9232-4565-BBD6-94372D6B03EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39A9D3F-9232-4565-BBD6-94372D6B03EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39A9D3F-9232-4565-BBD6-94372D6B03EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
