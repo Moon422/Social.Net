@@ -51,7 +51,11 @@ public class UserController(IUserService userService,
 
         var password = new Password()
         {
-            Hash = model.Password
+            Hash = BCrypt.Net.BCrypt.HashPassword(model.Password)
         };
+        
+        
+
+        return Ok();
     }
 }
