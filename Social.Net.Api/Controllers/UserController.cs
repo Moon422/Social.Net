@@ -33,28 +33,34 @@ public class UserController(IUserService userService,
             return BadRequest(ModelState);
         }
 
-        var presentAddress = new Address()
+        await transactionManager.RunTransactionAsync(async () =>
         {
-            AddressLine1 = model.PresentAddress.AddressLine1,
-            AddressLine2 = model.PresentAddress.AddressLine2,
-            City = model.PresentAddress.City,
-            StateProvinceId = stateProvince.Id
-        };
-        
-        var profile = new Profile()
-        {
-            FirstName = model.FirstName,
-            LastName = model.LastName,
-            UserName = model.UserName,
-            Email = model.Email
-        };
+            var presentAddress = new Address()
+            {
+                AddressLine1 = model.PresentAddress.AddressLine1,
+                AddressLine2 = model.PresentAddress.AddressLine2,
+                City = model.PresentAddress.City,
+                StateProvinceId = stateProvince.Id
+            };
+            await addressService.InserAddressAsync(presentAddress, deferInsert: true);
 
-        var password = new Password()
-        {
-            Hash = BCrypt.Net.BCrypt.HashPassword(model.Password)
-        };
-        
-        
+            var profile = new Profile()
+            {
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                UserName = model.UserName,
+                Email = model.Email,
+                PresentAddressId = presentAddress.Id
+            };
+            await userService.InsertProfileAsync(profile, deferInsert: true);
+
+            var password = new Password()
+            {
+                Hash = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                ProfileId = profile.Id
+            };
+            await userService.InsertPasswordAsync(password, deferInsert: true);
+        });
 
         return Ok();
     }
