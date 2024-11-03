@@ -92,6 +92,19 @@ public class UserService(IRepository<Profile> profileRepository,
         });
     }
 
+    public async Task<Profile?> GetProfileByUsernameAsync(string username)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(username);
+        
+        var cacheKey = cacheService.PrepareCacheKey(UserCacheKeyConstants.GetProfileByUsernameCachekey, username);
+        return await cacheService.GetAsync(cacheKey, async () =>
+        {
+            var profile = await profileRepository.QueryBuilder
+                .FirstOrDefaultAsync(profile => profile.UserName == username);
+            return profile;
+        });
+    }
+
     public async Task InsertProfileAsync(Profile profile, bool deferCacheClear = false, bool deferInsert = false)
     {
         ArgumentNullException.ThrowIfNull(profile);

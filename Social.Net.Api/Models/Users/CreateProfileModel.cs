@@ -29,6 +29,4 @@ public record CreateProfileModel : BaseModel
     public string Password { get; set; }
 
     public AddressModel PresentAddress { get; set; }
-
-    public IList<DropdownItemModel> AvailableCountries { get; set; } = new List<DropdownItemModel>();
 }

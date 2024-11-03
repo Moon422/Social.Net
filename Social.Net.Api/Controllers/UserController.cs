@@ -4,6 +4,7 @@ using System.Text;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Social.Net.Api.Factories.Users;
 using Social.Net.Api.Models.Users;
 using Social.Net.Core.Domains.Directory;
 using Social.Net.Core.Domains.Users;
@@ -19,35 +20,33 @@ namespace Social.Net.Api.Controllers;
 public class UserController(IUserService userService, 
     IAddressService addressService, 
     IStateProvinceService stateProvinceService, 
+    IUserModelFactory userModelFactory,
     ITransactionManager transactionManager,
     IMapper mapper,
     IConfiguration configuration) : ControllerBase
 {
-    private string CreateToken(Profile profile)
-    {
-        List<Claim> claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, profile.UserName),
-            new Claim(ClaimTypes.Email, profile.Email)
-        };
-
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("Secret").Value!));
-        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-        var token = new JwtSecurityToken(
-            claims: claims,
-            expires: DateTime.UtcNow.AddMinutes(10),
-            signingCredentials: credentials
-        );
-        var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-
-        return jwt;
-    }
-    
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] LoginModel request)
+    public async Task<IActionResult> Login([FromBody] LoginModel model)
     {
-        return Ok();
+        var profile = await userService.GetProfileByEmailAsync(model.Email);
+        if (profile is null)
+        {
+            ModelState.AddModelError("message", "Invalid login credentials");
+            return BadRequest(ModelState);
+        }
+
+        var password = await userService.GetPasswordByProfileIdAsync(profile.Id);
+        if (password is null || !BCrypt.Net.BCrypt.Verify(model.Password, password.Hash))
+        {
+            ModelState.AddModelError("message", "Invalid login credentials");
+            return BadRequest(ModelState);
+        }
+
+        var loginResponse = await userModelFactory.PrepareLoginResponseModelAsync(new LoginResponseModel(), profile);
+        return Ok(loginResponse);
     }
+
+    
 
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] CreateProfileModel model)
@@ -62,23 +61,45 @@ public class UserController(IUserService userService,
             return BadRequest(ModelState);
         }
 
-        await transactionManager.RunTransactionAsync(async () =>
+        if ((await userService.GetProfileByEmailAsync(model.Email)) is not null)
         {
-            var presentAddress = mapper.Map<Address>(model.PresentAddress);
-            await addressService.InserAddressAsync(presentAddress, deferInsert: true);
+            ModelState.AddModelError("message", "User with email already exists.");
+            return BadRequest(ModelState);
+        }
+        
+        if ((await userService.GetProfileByUsernameAsync(model.UserName)) is not null)
+        {
+            ModelState.AddModelError("message", "User with username already exists.");
+            return BadRequest(ModelState);
+        }
 
-            var profile = mapper.Map<Profile>(model);
-            profile.PresentAddressId = presentAddress.Id;
-            await userService.InsertProfileAsync(profile, deferInsert: true);
-
-            var password = new Password()
+        try
+        {
+            var (profile, presentAddress) = await transactionManager.RunTransactionAsync(async () =>
             {
-                Hash = BCrypt.Net.BCrypt.HashPassword(model.Password),
-                ProfileId = profile.Id
-            };
-            await userService.InsertPasswordAsync(password, deferInsert: true);
-        });
+                var presentAddress = mapper.Map<Address>(model.PresentAddress);
+                await addressService.InserAddressAsync(presentAddress, deferInsert: true);
 
-        return Ok();
+                var profile = mapper.Map<Profile>(model);
+                profile.PresentAddressId = presentAddress.Id;
+                await userService.InsertProfileAsync(profile, deferInsert: true);
+
+                var password = new Password()
+                {
+                    Hash = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                    ProfileId = profile.Id
+                };
+                await userService.InsertPasswordAsync(password, deferInsert: true);
+
+                return (profile, presentAddress);
+            });
+
+            var loginResponse = await userModelFactory.PrepareLoginResponseModelAsync(new LoginResponseModel(), profile);
+            return Ok(loginResponse);
+        }
+        catch
+        {
+            return BadRequest("Failed to create account! Please try again.");
+        }
     }
 }

@@ -17,6 +17,24 @@ public class TransactionManager(SocialDbContext socialDbContext) : ITransactionM
         catch (Exception ex)
         {
             await transaction.RollbackAsync();
+            throw;
+        }
+    }
+    
+    public async Task<TRes> RunTransactionAsync<TRes>(Func<Task<TRes>> transactionOperation)
+    {
+        await using var transaction = await socialDbContext.Database.BeginTransactionAsync();
+
+        try
+        {
+            var rez = await transactionOperation();
+            await transaction.CommitAsync();
+            return rez;
+        }
+        catch (Exception ex)
+        {
+            await transaction.RollbackAsync();
+            throw;
         }
     }
 }

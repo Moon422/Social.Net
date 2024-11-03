@@ -8,13 +8,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="jwt deps">
-      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Users/RefreshToken.cs" afterDir="false" />
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="working with refresh tokens and jwt">
+      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Factories/Directory/AddressModelFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Factories/Users/IUserModelFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Factories/Users/UserModelFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Users/LoginResponseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Users/ProfileModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Services/Users/IRefreshTokenService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social.Net.Services/Users/RefreshTokenService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Models/Directory/AddressModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Directory/AddressModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Models/Users/CreateProfileModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Users/CreateProfileModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Data/ITransactionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/ITransactionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Data/TransactionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/TransactionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Services/Users/Caching/UserCacheKeyConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Services/Users/Caching/UserCacheKeyConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Services/Users/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Services/Users/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Services/Users/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Services/Users/UserService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,25 +68,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Social.Net.Api: http.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Social.Net.Api: http.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Social.Net.Api: http">
     <configuration name="Social.Net.Api: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Social.Net.Api/Social.Net.Api.csproj" />
@@ -123,7 +135,7 @@
       <workItem from="1730604044899" duration="3654000" />
       <workItem from="1730615834593" duration="1592000" />
       <workItem from="1730635708271" duration="723000" />
-      <workItem from="1730636450514" duration="5434000" />
+      <workItem from="1730636450514" duration="13643000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -373,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730640520901</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="working with refresh tokens and jwt">
+      <option name="closed" value="true" />
+      <created>1730641936484</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1730641936484</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +404,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="pomelo added to data project" />
     <MESSAGE value="added pomelo to data project" />
     <MESSAGE value="createing dbcontext" />
     <MESSAGE value="entity builder" />
@@ -409,25 +428,7 @@
     <MESSAGE value="postal code optional" />
     <MESSAGE value="basic user creation" />
     <MESSAGE value="jwt deps" />
-    <option name="LAST_COMMIT_MESSAGE" value="jwt deps" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs</url>
-          <line>66</line>
-          <properties documentPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" containingFunctionPresentation="Lambda expression inside Method 'Register'">
-            <startOffsets>
-              <option value="2230" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2293" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="working with refresh tokens and jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="working with refresh tokens and jwt" />
   </component>
 </project>

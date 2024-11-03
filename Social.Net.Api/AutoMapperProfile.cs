@@ -13,5 +13,7 @@ public class AutoMapperProfile : AutoMapper.Profile
             .ReverseMap();
 
         CreateMap<CreateProfileModel, Profile>();
+
+        CreateMap<Profile, ProfileModel>();
     }
 }

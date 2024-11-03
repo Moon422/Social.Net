@@ -15,6 +15,8 @@ public interface IUserService
     Task<Profile?> GetProfileByIdAsync(int profileId);
     
     Task<Profile?> GetProfileByEmailAsync(string email);
+    
+    Task<Profile?> GetProfileByUsernameAsync(string username);
 
     Task InsertProfileAsync(Profile profile, bool deferCacheClear = false, bool deferInsert = false);
 

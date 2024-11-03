@@ -22,4 +22,7 @@ public record AddressModel : BaseEntityModel
 
     [Required]
     public int StateProvinceId { get; set; }
+    public string? StateProvince { get; set; }
+    
+    public string? Country { get; set; }
 }

@@ -58,6 +58,7 @@ public class Startup(IConfiguration configuration)
     {
         // Add services to the container.
         services.AddControllers();
+        services.AddHttpContextAccessor();
         services.AddAuthentication().AddJwtBearer(
             options =>
             {
