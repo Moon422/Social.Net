@@ -8,12 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="postal code optional">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Models/Directory/AddressModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Directory/AddressModel.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="basic user creation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +116,7 @@
       <workItem from="1730604044899" duration="3654000" />
       <workItem from="1730615834593" duration="1592000" />
       <workItem from="1730635708271" duration="723000" />
-      <workItem from="1730636450514" duration="3500000" />
+      <workItem from="1730636450514" duration="3881000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -355,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730638988444</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="basic user creation">
+      <option name="closed" value="true" />
+      <created>1730640069411</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1730640069411</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +369,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="added core project and reference to api project" />
     <MESSAGE value="common, directory, user and friend domain" />
     <MESSAGE value="pomelo added to data project" />
     <MESSAGE value="added pomelo to data project" />
@@ -391,7 +393,8 @@
     <MESSAGE value="added automapper" />
     <MESSAGE value="postal code and automapper" />
     <MESSAGE value="postal code optional" />
-    <option name="LAST_COMMIT_MESSAGE" value="postal code optional" />
+    <MESSAGE value="basic user creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic user creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -408,19 +411,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Social.Net.Data/Repository.cs</url>
-          <line>53</line>
-          <properties documentPath="$PROJECT_DIR$/Social.Net.Data/Repository.cs" containingFunctionPresentation="Local function 'InsertCall'">
-            <startOffsets>
-              <option value="1552" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1600" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
