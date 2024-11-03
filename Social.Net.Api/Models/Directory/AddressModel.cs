@@ -16,6 +16,9 @@ public record AddressModel : BaseEntityModel
     [MaxLength(256)]
     [Required]
     public string City { get; set; }
+    
+    [MaxLength(20)]
+    public string PostalCode { get; set; }
 
     [Required]
     public int StateProvinceId { get; set; }

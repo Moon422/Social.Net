@@ -17,7 +17,7 @@ public class Address : BaseEntity
     public string City { get; set; }
     
     [MaxLength(20)]
-    public string PostalCode { get; set; }
+    public string? PostalCode { get; set; }
 
     public int StateProvinceId { get; set; }
 }
