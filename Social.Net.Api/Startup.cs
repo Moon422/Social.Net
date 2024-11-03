@@ -1,5 +1,7 @@
 using System.Reflection;
+using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Social.Net.Core.Attributes.DependencyRegistrars;
 using Social.Net.Data;
 
@@ -56,6 +58,20 @@ public class Startup(IConfiguration configuration)
     {
         // Add services to the container.
         services.AddControllers();
+        services.AddAuthentication().AddJwtBearer(
+            options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    ValidateAudience = false,
+                    ValidateIssuer = false,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+                        configuration.GetSection("Secret").Value!
+                    ))
+                };
+            }
+        );
         services.AddAuthorization();
         services.AddMemoryCache();
         services.AddAutoMapper(option => option.AddProfile<AutoMapperProfile>());
@@ -87,6 +103,7 @@ public class Startup(IConfiguration configuration)
 
         app.UseHttpsRedirection();
         app.UseRouting();
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>

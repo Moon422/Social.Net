@@ -8,7 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="basic user creation" />
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="jwt deps">
+      <change afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Users/RefreshToken.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/SocialDbContext.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +123,7 @@
       <workItem from="1730604044899" duration="3654000" />
       <workItem from="1730615834593" duration="1592000" />
       <workItem from="1730635708271" duration="723000" />
-      <workItem from="1730636450514" duration="3881000" />
+      <workItem from="1730636450514" duration="5434000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -358,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730640069411</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="jwt deps">
+      <option name="closed" value="true" />
+      <created>1730640520901</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1730640520901</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +384,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="common, directory, user and friend domain" />
     <MESSAGE value="pomelo added to data project" />
     <MESSAGE value="added pomelo to data project" />
     <MESSAGE value="createing dbcontext" />
@@ -394,20 +408,21 @@
     <MESSAGE value="postal code and automapper" />
     <MESSAGE value="postal code optional" />
     <MESSAGE value="basic user creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic user creation" />
+    <MESSAGE value="jwt deps" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt deps" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs</url>
-          <line>41</line>
+          <line>66</line>
           <properties documentPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" containingFunctionPresentation="Lambda expression inside Method 'Register'">
             <startOffsets>
-              <option value="1353" />
+              <option value="2230" />
             </startOffsets>
             <endOffsets>
-              <option value="1416" />
+              <option value="2293" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />

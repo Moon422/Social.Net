@@ -1,5 +1,9 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using Social.Net.Api.Models.Users;
 using Social.Net.Core.Domains.Directory;
 using Social.Net.Core.Domains.Users;
@@ -16,8 +20,29 @@ public class UserController(IUserService userService,
     IAddressService addressService, 
     IStateProvinceService stateProvinceService, 
     ITransactionManager transactionManager,
-    IMapper mapper) : ControllerBase
+    IMapper mapper,
+    IConfiguration configuration) : ControllerBase
 {
+    private string CreateToken(Profile profile)
+    {
+        List<Claim> claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, profile.UserName),
+            new Claim(ClaimTypes.Email, profile.Email)
+        };
+
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("Secret").Value!));
+        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+        var token = new JwtSecurityToken(
+            claims: claims,
+            expires: DateTime.UtcNow.AddMinutes(10),
+            signingCredentials: credentials
+        );
+        var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+        return jwt;
+    }
+    
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginModel request)
     {

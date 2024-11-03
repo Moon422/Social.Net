@@ -9,6 +9,7 @@ public class SocialDbContext(DbContextOptions options) : DbContext(options)
 {
     public DbSet<Profile> Profiles { get; set; }
     public DbSet<Password> Passwords { get; set; }
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
     public DbSet<Address> Addresses { get; set; }
     public DbSet<StateProvince> StateProvinces { get; set; }
     public DbSet<Country> Countries { get; set; }
@@ -39,6 +40,14 @@ public class SocialDbContext(DbContextOptions options) : DbContext(options)
             entity.HasOne<Profile>()
                 .WithOne()
                 .HasForeignKey<Password>(p => p.ProfileId)
+                .IsRequired();
+        });
+
+        modelBuilder.Entity<RefreshToken>(entity =>
+        {
+            entity.HasOne<Profile>()
+                .WithMany()
+                .HasForeignKey(rt => rt.ProfileId)
                 .IsRequired();
         });
 
