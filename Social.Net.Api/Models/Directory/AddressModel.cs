@@ -18,7 +18,7 @@ public record AddressModel : BaseEntityModel
     public string City { get; set; }
     
     [MaxLength(20)]
-    public string PostalCode { get; set; }
+    public string? PostalCode { get; set; }
 
     [Required]
     public int StateProvinceId { get; set; }

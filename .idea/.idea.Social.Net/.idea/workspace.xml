@@ -8,10 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="postal code and automapper">
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="postal code optional">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social.Net.Api/Models/Directory/AddressModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Directory/AddressModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/Address.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/Address.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +121,7 @@
       <workItem from="1730604044899" duration="3654000" />
       <workItem from="1730615834593" duration="1592000" />
       <workItem from="1730635708271" duration="723000" />
-      <workItem from="1730636450514" duration="2494000" />
+      <workItem from="1730636450514" duration="3500000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -346,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730638699944</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="postal code optional">
+      <option name="closed" value="true" />
+      <created>1730638988444</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1730638988444</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +366,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial commit" />
     <MESSAGE value="added core project and reference to api project" />
     <MESSAGE value="common, directory, user and friend domain" />
     <MESSAGE value="pomelo added to data project" />
@@ -382,36 +390,37 @@
     <MESSAGE value="ef 8.0.2 downgrade 777" />
     <MESSAGE value="added automapper" />
     <MESSAGE value="postal code and automapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="postal code and automapper" />
+    <MESSAGE value="postal code optional" />
+    <option name="LAST_COMMIT_MESSAGE" value="postal code optional" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs</url>
-          <line>26</line>
-          <properties documentPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" containingFunctionPresentation="Method 'Register'">
-            <startOffsets>
-              <option value="782" />
-            </startOffsets>
-            <endOffsets>
-              <option value="906" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs</url>
-          <line>38</line>
+          <line>41</line>
           <properties documentPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" containingFunctionPresentation="Lambda expression inside Method 'Register'">
             <startOffsets>
-              <option value="1260" />
+              <option value="1353" />
             </startOffsets>
             <endOffsets>
-              <option value="1556" />
+              <option value="1416" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Social.Net.Data/Repository.cs</url>
+          <line>53</line>
+          <properties documentPath="$PROJECT_DIR$/Social.Net.Data/Repository.cs" containingFunctionPresentation="Local function 'InsertCall'">
+            <startOffsets>
+              <option value="1552" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1600" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

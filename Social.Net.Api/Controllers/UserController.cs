@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Social.Net.Api.Models.Users;
 using Social.Net.Core.Domains.Directory;
@@ -5,6 +6,7 @@ using Social.Net.Core.Domains.Users;
 using Social.Net.Data;
 using Social.Net.Services.Directory;
 using Social.Net.Services.Users;
+using Profile = Social.Net.Core.Domains.Users.Profile;
 
 namespace Social.Net.Api.Controllers;
 
@@ -13,7 +15,8 @@ namespace Social.Net.Api.Controllers;
 public class UserController(IUserService userService, 
     IAddressService addressService, 
     IStateProvinceService stateProvinceService, 
-    ITransactionManager transactionManager) : ControllerBase
+    ITransactionManager transactionManager,
+    IMapper mapper) : ControllerBase
 {
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginModel request)
@@ -36,23 +39,11 @@ public class UserController(IUserService userService,
 
         await transactionManager.RunTransactionAsync(async () =>
         {
-            var presentAddress = new Address()
-            {
-                AddressLine1 = model.PresentAddress.AddressLine1,
-                AddressLine2 = model.PresentAddress.AddressLine2,
-                City = model.PresentAddress.City,
-                StateProvinceId = stateProvince.Id
-            };
+            var presentAddress = mapper.Map<Address>(model.PresentAddress);
             await addressService.InserAddressAsync(presentAddress, deferInsert: true);
 
-            var profile = new Profile()
-            {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                UserName = model.UserName,
-                Email = model.Email,
-                PresentAddressId = presentAddress.Id
-            };
+            var profile = mapper.Map<Profile>(model);
+            profile.PresentAddressId = presentAddress.Id;
             await userService.InsertProfileAsync(profile, deferInsert: true);
 
             var password = new Password()
