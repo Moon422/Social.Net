@@ -8,10 +8,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="">
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="added automapper">
+      <change afterPath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Services/Users/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Services/Users/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/Address.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Core/Domains/Directory/Address.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Data/Migrations/SocialDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/Migrations/SocialDbContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +122,7 @@
       <workItem from="1730604044899" duration="3654000" />
       <workItem from="1730615834593" duration="1592000" />
       <workItem from="1730635708271" duration="723000" />
-      <workItem from="1730636450514" duration="1023000" />
+      <workItem from="1730636450514" duration="2186000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -322,7 +324,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730617357228</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added automapper">
+      <option name="closed" value="true" />
+      <created>1730637607903</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1730637607903</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added automapper">
+      <option name="closed" value="true" />
+      <created>1730637697980</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1730637697980</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +374,8 @@
     <MESSAGE value="downgrade to 8.0.2 ef" />
     <MESSAGE value="ef 8.0.2 downgrade 6th" />
     <MESSAGE value="ef 8.0.2 downgrade 777" />
-    <option name="LAST_COMMIT_MESSAGE" value="ef 8.0.2 downgrade 777" />
+    <MESSAGE value="added automapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="added automapper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -373,6 +392,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs</url>
+          <line>38</line>
+          <properties documentPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" containingFunctionPresentation="Lambda expression inside Method 'Register'">
+            <startOffsets>
+              <option value="1260" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1556" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

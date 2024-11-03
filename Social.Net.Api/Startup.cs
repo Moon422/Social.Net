@@ -58,6 +58,7 @@ public class Startup(IConfiguration configuration)
         services.AddControllers();
         services.AddAuthorization();
         services.AddMemoryCache();
+        services.AddAutoMapper(option => option.AddProfile<AutoMapperProfile>());
 
         services.AddDbContext<SocialDbContext>(options =>
         {
