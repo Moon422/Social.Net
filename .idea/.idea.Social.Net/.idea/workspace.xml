@@ -8,11 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="login and registration feature with models and factories">
-      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Controllers/Constants/UserConstants.cs" afterDir="false" />
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="working on github workflows">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Factories/Users/UserModelFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Factories/Users/UserModelFactory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,11 @@
     <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -58,7 +61,8 @@
   "keyToString": {
     ".NET Launch Settings Profile.Social.Net.Api: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "/home/moon/Projects/CSharp/Social.Net/.github",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -121,7 +125,7 @@
       <workItem from="1730604044899" duration="3654000" />
       <workItem from="1730615834593" duration="1592000" />
       <workItem from="1730635708271" duration="723000" />
-      <workItem from="1730636450514" duration="15948000" />
+      <workItem from="1730636450514" duration="18227000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -387,7 +391,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730650367265</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="login, registration and jwt refresh">
+      <option name="closed" value="true" />
+      <created>1730653016665</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1730653016665</updated>
+    </task>
+    <task id="LOCAL-00035" summary="working on github workflows">
+      <option name="closed" value="true" />
+      <created>1730654088280</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1730654088280</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,8 +418,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="createing dbcontext" />
-    <MESSAGE value="entity builder" />
     <MESSAGE value="Microsoft.EntityFrameworkCore.Design" />
     <MESSAGE value="ef design" />
     <MESSAGE value="initial migrations" />
@@ -423,6 +441,8 @@
     <MESSAGE value="jwt deps" />
     <MESSAGE value="working with refresh tokens and jwt" />
     <MESSAGE value="login and registration feature with models and factories" />
-    <option name="LAST_COMMIT_MESSAGE" value="login and registration feature with models and factories" />
+    <MESSAGE value="login, registration and jwt refresh" />
+    <MESSAGE value="working on github workflows" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on github workflows" />
   </component>
 </project>

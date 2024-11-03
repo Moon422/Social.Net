@@ -1,0 +1,36 @@
+name: Main Deploy
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04 [Beta]
+    
+    steps:
+      - uses: actions/checkout@v4
+        
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      
+      - name: Restore Dependencies
+        run: dotnet restore 
+        
+      - name: Build 
+        run: dotnet build -c Release --no-restore
+      
+      - name: Publish
+        run: dotnet publish -c Release -r linux-x64 --self-contained -o social_dotnet_linux_x64 
+      
+      - name: Compress (using Tar)
+        run: |
+          tar -czf social_dotnet_linux_x64.tar.gz social_dotnet_linux_x64
+          sshpass -p "${{ secrets.PASSWORD }}" scp -o StrictHostKeyChecking=no social_dotnet_linux_x64.tar.gz ${{ secrets.USERNAME }}@${{ secrets.HOST }}:~/ 
+      
+      - name: Deploy
+        run: sshpass -p "${{ secrets.PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} "/home/${{ secrets.USERNAME }}/deploy.sh"
