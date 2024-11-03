@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Social.Net.Core.Attributes.DependencyRegistrars;
 using Social.Net.Core.Domains.Users;
 using Social.Net.Data;
 using Social.Net.Services.Caching;
@@ -6,6 +7,7 @@ using Social.Net.Services.Users.Caching;
 
 namespace Social.Net.Services.Users;
 
+[ScopedDependency(typeof(IUserService))]
 public class UserService(IRepository<Profile> profileRepository, 
     IRepository<Password> passwordRepository,
     ICacheService cacheService) : IUserService

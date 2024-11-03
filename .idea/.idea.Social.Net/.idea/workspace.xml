@@ -8,7 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="ef 8.0.2 downgrade 6th" />
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Services/Users/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Services/Users/UserService.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +118,9 @@
       <workItem from="1730482230169" duration="2374000" />
       <workItem from="1730548845691" duration="22856000" />
       <workItem from="1730604044899" duration="3654000" />
-      <workItem from="1730615834593" duration="1262000" />
+      <workItem from="1730615834593" duration="1592000" />
+      <workItem from="1730635708271" duration="723000" />
+      <workItem from="1730636450514" duration="1023000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -308,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730616928420</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ef 8.0.2 downgrade 777">
+      <option name="closed" value="true" />
+      <created>1730617357228</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1730617357228</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +355,8 @@
     <MESSAGE value="ef downgrade 8.0.2" />
     <MESSAGE value="downgrade to 8.0.2 ef" />
     <MESSAGE value="ef 8.0.2 downgrade 6th" />
-    <option name="LAST_COMMIT_MESSAGE" value="ef 8.0.2 downgrade 6th" />
+    <MESSAGE value="ef 8.0.2 downgrade 777" />
+    <option name="LAST_COMMIT_MESSAGE" value="ef 8.0.2 downgrade 777" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -358,19 +373,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Social.Net.Api/Startup.cs</url>
-          <line>32</line>
-          <properties documentPath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" containingFunctionPresentation="Method 'RegisterService'">
-            <startOffsets>
-              <option value="1075" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1121" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

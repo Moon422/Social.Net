@@ -9,21 +9,25 @@ public class Startup(IConfiguration configuration)
 {
     private static void RegisterService(IServiceCollection services)
     {
-        var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-        
+        var assemblies = new List<Assembly>();
+        var currentAssembly = Assembly.GetExecutingAssembly();
+        assemblies.Add(currentAssembly);
+        assemblies.AddRange(currentAssembly.GetReferencedAssemblies()
+            .Select(Assembly.Load));
+
         foreach (var assembly in assemblies)
         {
             try
             {
                 var types = assembly.GetTypes();
-
+            
                 foreach (var type in types)
                 {
                     if (!type.IsClass || type.IsAbstract || type.IsInterface)
                     {
                         continue;
                     }
-
+            
                     if (type.GetCustomAttribute<SingletonDependencyAttribute>() is { } sda)
                     {
                         services.AddSingleton(sda.DependencyType, type);
@@ -53,6 +57,7 @@ public class Startup(IConfiguration configuration)
         // Add services to the container.
         services.AddControllers();
         services.AddAuthorization();
+        services.AddMemoryCache();
 
         services.AddDbContext<SocialDbContext>(options =>
         {
