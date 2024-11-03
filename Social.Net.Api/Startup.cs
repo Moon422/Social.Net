@@ -19,23 +19,22 @@ public class Startup(IConfiguration configuration)
 
                 foreach (var type in types)
                 {
-                    if (!type.IsClass || type.IsAbstract || type.IsInterface ||
-                        type.GetCustomAttribute<DependencyAttribute>() is not { } da)
+                    if (!type.IsClass || type.IsAbstract || type.IsInterface)
                     {
                         continue;
                     }
 
-                    switch (da)
+                    if (type.GetCustomAttribute<SingletonDependencyAttribute>() is { } sda)
                     {
-                        case SingletonDependencyAttribute:
-                            services.AddSingleton(da.DependencyType, type);
-                            break;
-                        case ScopedDependencyAttribute:
-                            services.AddScoped(da.DependencyType, type);
-                            break;
-                        case TransientDependencyAttribute:
-                            services.AddTransient(da.DependencyType, type);
-                            break;
+                        services.AddSingleton(sda.DependencyType, type);
+                    }
+                    else if (type.GetCustomAttribute<ScopedDependencyAttribute>() is { } sda2)
+                    {
+                        services.AddScoped(sda2.DependencyType, type);
+                    }
+                    else if (type.GetCustomAttribute<TransientDependencyAttribute>() is { } tda)
+                    {
+                        services.AddTransient(tda.DependencyType, type);
                     }
                 }
             }
@@ -52,6 +51,7 @@ public class Startup(IConfiguration configuration)
     public void ConfigureServices(IServiceCollection services)
     {
         // Add services to the container.
+        services.AddControllers();
         services.AddAuthorization();
 
         services.AddDbContext<SocialDbContext>(options =>

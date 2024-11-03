@@ -21,6 +21,7 @@ public class UserController(IUserService userService,
         return Ok();
     }
 
+    [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] CreateProfileModel model)
     {
         var stateProvince = await stateProvinceService

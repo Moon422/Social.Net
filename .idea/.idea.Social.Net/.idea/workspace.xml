@@ -8,19 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Social.Net.Data/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Data/ITransactionManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Data/Repository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Data/TransactionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/dataSources/dd807c65-f324-4327-a649-dc0496d6fe9d.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/dataSources/dd807c65-f324-4327-a649-dc0496d6fe9d/storage_v2/_src_/schema/social_db.kIYf0w.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="ef 8.0.2 downgrade 6th" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,8 +33,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/moon/Projects/CSharp/Social.Net/Social.Net.Data/DesignTimeDbContextFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/moon/Projects/CSharp/Social.Net/Social.Net.Data/DesignTimeDbContextFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/49b65094644b3debff1f39f84be6e227efbf91dfc3a9272b23a95d307867ab/ControllerEndpointRouteBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/658ad1fa108317d78bcae889b6e4f9dd5327babb6582972f2dbeabf36dafa5/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Social.Net.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -55,6 +51,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Social.Net.Api: http.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -115,6 +112,9 @@
       <workItem from="1730427401687" duration="660000" />
       <workItem from="1730428709871" duration="4416000" />
       <workItem from="1730482230169" duration="2374000" />
+      <workItem from="1730548845691" duration="22856000" />
+      <workItem from="1730604044899" duration="3654000" />
+      <workItem from="1730615834593" duration="1262000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -196,7 +196,119 @@
       <option name="project" value="LOCAL" />
       <updated>1730432626677</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="a lot">
+      <option name="closed" value="true" />
+      <created>1730572139805</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730572139805</updated>
+    </task>
+    <task id="LOCAL-00012" summary="bcrypt net">
+      <option name="closed" value="true" />
+      <created>1730572469541</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730572469541</updated>
+    </task>
+    <task id="LOCAL-00013" summary="bcrypt net">
+      <option name="closed" value="true" />
+      <created>1730572555793</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730572555793</updated>
+    </task>
+    <task id="LOCAL-00014" summary="bcrypt net">
+      <option name="closed" value="true" />
+      <created>1730572997328</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730572997328</updated>
+    </task>
+    <task id="LOCAL-00015" summary="user controller, need to update repository">
+      <option name="closed" value="true" />
+      <created>1730573397988</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730573397988</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ef design downgrade">
+      <option name="closed" value="true" />
+      <created>1730605258254</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1730605258254</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ef downgrade">
+      <option name="closed" value="true" />
+      <created>1730605405029</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1730605405029</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ef downgrade again">
+      <option name="closed" value="true" />
+      <created>1730616019161</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1730616019161</updated>
+    </task>
+    <task id="LOCAL-00019" summary="ef downgrade 2">
+      <option name="closed" value="true" />
+      <created>1730616074181</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1730616074181</updated>
+    </task>
+    <task id="LOCAL-00020" summary="downgrade ef 3">
+      <option name="closed" value="true" />
+      <created>1730616203431</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730616203431</updated>
+    </task>
+    <task id="LOCAL-00021" summary="ef downgrade 4">
+      <option name="closed" value="true" />
+      <created>1730616300345</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1730616300345</updated>
+    </task>
+    <task id="LOCAL-00022" summary="ef downgrade 8.0.2">
+      <option name="closed" value="true" />
+      <created>1730616643496</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1730616643496</updated>
+    </task>
+    <task id="LOCAL-00023" summary="downgrade to 8.0.2 ef">
+      <option name="closed" value="true" />
+      <created>1730616689613</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1730616689613</updated>
+    </task>
+    <task id="LOCAL-00024" summary="ef 8.0.2 downgrade 6th">
+      <option name="closed" value="true" />
+      <created>1730616928420</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1730616928420</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +329,50 @@
     <MESSAGE value="Microsoft.EntityFrameworkCore.Design" />
     <MESSAGE value="ef design" />
     <MESSAGE value="initial migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial migrations" />
+    <MESSAGE value="a lot" />
+    <MESSAGE value="bcrypt net" />
+    <MESSAGE value="user controller, need to update repository" />
+    <MESSAGE value="ef design downgrade" />
+    <MESSAGE value="ef downgrade" />
+    <MESSAGE value="ef downgrade again" />
+    <MESSAGE value="ef downgrade 2" />
+    <MESSAGE value="downgrade ef 3" />
+    <MESSAGE value="ef downgrade 4" />
+    <MESSAGE value="ef downgrade 8.0.2" />
+    <MESSAGE value="downgrade to 8.0.2 ef" />
+    <MESSAGE value="ef 8.0.2 downgrade 6th" />
+    <option name="LAST_COMMIT_MESSAGE" value="ef 8.0.2 downgrade 6th" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs</url>
+          <line>26</line>
+          <properties documentPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" containingFunctionPresentation="Method 'Register'">
+            <startOffsets>
+              <option value="782" />
+            </startOffsets>
+            <endOffsets>
+              <option value="906" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Social.Net.Api/Startup.cs</url>
+          <line>32</line>
+          <properties documentPath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" containingFunctionPresentation="Method 'RegisterService'">
+            <startOffsets>
+              <option value="1075" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1121" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

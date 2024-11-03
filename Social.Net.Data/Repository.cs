@@ -49,7 +49,11 @@ public class Repository<TEntity>(SocialDbContext dbContext, ITransactionManager 
         
         return deferInsert ? InsertCall() : transactionManager.RunTransactionAsync(InsertCall);
 
-        async Task InsertCall() => await dbContext.Set<TEntity>().AddAsync(entity);
+        async Task InsertCall()
+        {
+            await dbContext.Set<TEntity>().AddAsync(entity);
+            await dbContext.SaveChangesAsync();
+        }
     }
 
     public Task UpdateAsync(TEntity entity, bool deferUpdate = false)
@@ -62,8 +66,12 @@ public class Repository<TEntity>(SocialDbContext dbContext, ITransactionManager 
         }
 
         return deferUpdate ? UpdateCall() : transactionManager.RunTransactionAsync(UpdateCall);
-        
-        Task UpdateCall() => Task.FromResult(() => dbContext.Set<TEntity>().Update(entity));
+
+        async Task UpdateCall()
+        {
+            dbContext.Set<TEntity>().Update(entity);
+            await dbContext.SaveChangesAsync();
+        }
     }
 
     public Task DeleteAsync(TEntity entity, bool deferDelete = false)
@@ -79,6 +87,10 @@ public class Repository<TEntity>(SocialDbContext dbContext, ITransactionManager 
         softDeleted.DeletedOn = DateTime.UtcNow;
         return UpdateAsync(entity, deferDelete);
 
-        Task DeleteCall() => Task.FromResult(dbContext.Set<TEntity>().Remove(entity));
+        async Task DeleteCall()
+        {
+            dbContext.Set<TEntity>().Remove(entity);
+            await dbContext.SaveChangesAsync();
+        }
     }
 }

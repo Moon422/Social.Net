@@ -2,7 +2,7 @@ using Social.Net.Core.Attributes.DependencyRegistrars;
 
 namespace Social.Net.Data;
 
-[SingletonDependency(typeof(ITransactionManager))]
+[ScopedDependency(typeof(ITransactionManager))]
 public class TransactionManager(SocialDbContext socialDbContext) : ITransactionManager
 {
     public async Task RunTransactionAsync(Func<Task> transactionOperation)
@@ -12,7 +12,6 @@ public class TransactionManager(SocialDbContext socialDbContext) : ITransactionM
         try
         {
             await transactionOperation();
-            await socialDbContext.SaveChangesAsync();
             await transaction.CommitAsync();
         }
         catch (Exception ex)
