@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using AutoMapper;
 using Microsoft.IdentityModel.Tokens;
+using Social.Net.Api.Controllers.Constants;
 using Social.Net.Api.Factories.Directory;
 using Social.Net.Api.Models.Directory;
 using Social.Net.Api.Models.Users;
@@ -16,9 +17,7 @@ using Profile = Social.Net.Core.Domains.Users.Profile;
 namespace Social.Net.Api.Factories.Users;
 
 [ScopedDependency(typeof(IUserModelFactory))]
-public class UserModelFactory(IHttpContextAccessor httpContextAccessor,
-    IRefreshTokenService refreshTokenService,
-    IAddressService addressService,
+public class UserModelFactory(IAddressService addressService,
     IAddressModelFactory addressModelFactory,
     IConfiguration configuration,
     IMapper mapper) : IUserModelFactory
@@ -43,32 +42,19 @@ public class UserModelFactory(IHttpContextAccessor httpContextAccessor,
         return jwt;
     }
     
-    private async Task<RefreshToken> GenerateRefreshTokenAsync(Profile profile)
-    {
-        var refreshToken = new RefreshToken()
-        {
-            ProfileId = profile.Id
-        };
-        await refreshTokenService.InsertRefreshTokenAsync(refreshToken);
-
-        return refreshToken;
-    }
-    
     public async Task<LoginResponseModel> PrepareLoginResponseModelAsync(LoginResponseModel model, Profile profile)
     {
         ArgumentNullException.ThrowIfNull(model);
         ArgumentNullException.ThrowIfNull(profile);
         
-        var refreshToken = await GenerateRefreshTokenAsync(profile);
-        httpContextAccessor.HttpContext!.Response.Cookies.Append(
-            "refresh-token",
-            refreshToken.Token,
-            new CookieOptions
-            {
-                HttpOnly = true,
-                Expires = DateTimeOffset.UtcNow.AddDays(7)
-            }
-        );
+        // var refreshToken = await GenerateRefreshTokenAsync(profile);
+        // httpContextAccessor.HttpContext!.Response.Cookies.Append(UserConstants.CookieRefreshTokenKey, refreshToken.Token,
+        //     new CookieOptions
+        //     {
+        //         HttpOnly = true,
+        //         Expires = DateTimeOffset.UtcNow.AddDays(7)
+        //     }
+        // );
         
         var token = CreateToken(profile);
         model.JwtToken = token;

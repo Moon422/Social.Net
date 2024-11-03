@@ -3,7 +3,7 @@ using Social.Net.Api.Models.Directory;
 
 namespace Social.Net.Api.Models.Users;
 
-public record ProfileModel : BaseModel
+public record ProfileModel : BaseEntityModel
 {
     [MaxLength(128)]
     [MinLength(1)]

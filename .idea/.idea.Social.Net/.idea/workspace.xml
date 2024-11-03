@@ -8,25 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="working with refresh tokens and jwt">
-      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Factories/Directory/AddressModelFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Factories/Users/IUserModelFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Factories/Users/UserModelFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Users/LoginResponseModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Users/ProfileModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Services/Users/IRefreshTokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social.Net.Services/Users/RefreshTokenService.cs" afterDir="false" />
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="login and registration feature with models and factories">
+      <change afterPath="$PROJECT_DIR$/Social.Net.Api/Controllers/Constants/UserConstants.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/AutoMapperProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Models/Directory/AddressModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Directory/AddressModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Models/Users/CreateProfileModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Models/Users/CreateProfileModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Data/ITransactionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/ITransactionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Data/TransactionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Data/TransactionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Services/Users/Caching/UserCacheKeyConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Services/Users/Caching/UserCacheKeyConstants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Services/Users/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Services/Users/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social.Net.Services/Users/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Services/Users/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social.Net.Api/Factories/Users/UserModelFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Social.Net.Api/Factories/Users/UserModelFactory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +121,7 @@
       <workItem from="1730604044899" duration="3654000" />
       <workItem from="1730615834593" duration="1592000" />
       <workItem from="1730635708271" duration="723000" />
-      <workItem from="1730636450514" duration="13643000" />
+      <workItem from="1730636450514" duration="15948000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -393,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730641936484</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="login and registration feature with models and factories">
+      <option name="closed" value="true" />
+      <created>1730650367265</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1730650367265</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +398,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="added pomelo to data project" />
     <MESSAGE value="createing dbcontext" />
     <MESSAGE value="entity builder" />
     <MESSAGE value="Microsoft.EntityFrameworkCore.Design" />
@@ -429,6 +422,7 @@
     <MESSAGE value="basic user creation" />
     <MESSAGE value="jwt deps" />
     <MESSAGE value="working with refresh tokens and jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="working with refresh tokens and jwt" />
+    <MESSAGE value="login and registration feature with models and factories" />
+    <option name="LAST_COMMIT_MESSAGE" value="login and registration feature with models and factories" />
   </component>
 </project>

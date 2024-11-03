@@ -4,6 +4,7 @@ using System.Text;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Social.Net.Api.Controllers.Constants;
 using Social.Net.Api.Factories.Users;
 using Social.Net.Api.Models.Users;
 using Social.Net.Core.Domains.Directory;
@@ -20,11 +21,23 @@ namespace Social.Net.Api.Controllers;
 public class UserController(IUserService userService, 
     IAddressService addressService, 
     IStateProvinceService stateProvinceService, 
+    IRefreshTokenService refreshTokenService,
     IUserModelFactory userModelFactory,
     ITransactionManager transactionManager,
     IMapper mapper,
     IConfiguration configuration) : ControllerBase
 {
+    private async Task<RefreshToken> GenerateRefreshTokenAsync(Profile profile)
+    {
+        var refreshToken = new RefreshToken()
+        {
+            ProfileId = profile.Id
+        };
+        await refreshTokenService.InsertRefreshTokenAsync(refreshToken);
+
+        return refreshToken;
+    }
+    
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginModel model)
     {
@@ -42,6 +55,15 @@ public class UserController(IUserService userService,
             return BadRequest(ModelState);
         }
 
+        var refreshToken = await GenerateRefreshTokenAsync(profile);
+        HttpContext.Response.Cookies.Append(UserConstants.CookieRefreshTokenKey, refreshToken.Token,
+            new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTimeOffset.UtcNow.AddDays(7)
+            }
+        );
+        
         var loginResponse = await userModelFactory.PrepareLoginResponseModelAsync(new LoginResponseModel(), profile);
         return Ok(loginResponse);
     }
@@ -101,5 +123,47 @@ public class UserController(IUserService userService,
         {
             return BadRequest("Failed to create account! Please try again.");
         }
+    }
+
+    [HttpGet("refresh-jwt")]
+    public async Task<IActionResult> RefreshJwt()
+    {
+        var token = HttpContext.Request.Cookies["refresh-token"];
+        if (string.IsNullOrWhiteSpace(token))
+        {
+            return Unauthorized();
+        }
+
+        if (await refreshTokenService.GetRefreshTokenByTokenAsync(token) is not { Active: true } refreshToken)
+        {
+            return Unauthorized();
+        }
+
+        var timeToExpire = refreshToken.ExpiryDate - DateTime.UtcNow;
+
+        if (timeToExpire <= TimeSpan.Zero)
+        {
+            return Unauthorized();
+        }
+
+        if (await userService.GetProfileByIdAsync(refreshToken.ProfileId) is not { } profile)
+        {
+            return Unauthorized();
+        }
+
+        if (timeToExpire.TotalDays < 1)
+        {
+            var newRefreshToken = await GenerateRefreshTokenAsync(profile);
+            HttpContext.Response.Cookies.Append(UserConstants.CookieRefreshTokenKey, newRefreshToken.Token,
+                new CookieOptions
+                {
+                    HttpOnly = true,
+                    Expires = DateTimeOffset.UtcNow.AddDays(7)
+                }
+            );
+        }
+        
+        var loginResponse = await userModelFactory.PrepareLoginResponseModelAsync(new LoginResponseModel(), profile);
+        return Ok(loginResponse);
     }
 }
