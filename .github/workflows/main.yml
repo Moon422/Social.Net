@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, devfromeast]
+    runs-on: ubuntu-24.04 [Beta]
     
     steps:
       - uses: actions/checkout@v4
