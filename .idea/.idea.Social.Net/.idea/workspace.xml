@@ -8,7 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="" />
+    <list default="true" id="d456b5c4-6a1a-4ec9-bec3-57c4f97a3254" name="Changes" comment="cicd not working">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social.Net/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,6 +126,7 @@
       <workItem from="1730635708271" duration="723000" />
       <workItem from="1730636450514" duration="19602000" />
       <workItem from="1730659243392" duration="214000" />
+      <workItem from="1730688340153" duration="1788000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -421,7 +424,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730659369727</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="cicd">
+      <option name="closed" value="true" />
+      <created>1730688522137</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1730688522137</updated>
+    </task>
+    <task id="LOCAL-00039" summary="cicd not working">
+      <option name="closed" value="true" />
+      <created>1730688594004</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1730688594004</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,8 +451,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial migrations" />
-    <MESSAGE value="a lot" />
     <MESSAGE value="bcrypt net" />
     <MESSAGE value="user controller, need to update repository" />
     <MESSAGE value="ef design downgrade" />
@@ -457,6 +474,8 @@
     <MESSAGE value="working on github workflows" />
     <MESSAGE value="github action deploy main" />
     <MESSAGE value="got rid of github actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="got rid of github actions" />
+    <MESSAGE value="cicd" />
+    <MESSAGE value="cicd not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="cicd not working" />
   </component>
 </project>
